@@ -4,10 +4,12 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.app.henry.gameofvelha.R
+import com.app.henry.gameofvelha.model.entity.Game
 import kotlinx.android.synthetic.main.activity_adjust.*
 import java.util.*
 
 class AdjustActivity: AppCompatActivity(){
+    private var game: Game? = null
     private var playerOne: String? = null
     private var playerTwo: String? = null
     private var playerOneSymbol: String? = null
@@ -32,13 +34,10 @@ class AdjustActivity: AppCompatActivity(){
             R.id.fiveSecRadio -> timeToPlay = 5
         }
         val gameSetup = Intent(this@AdjustActivity, GameActivity::class.java)
-        gameSetup.putStringArrayListExtra("gameSetup",arrayListOf<String>(
-                playerOne!!,
-                playerTwo!!,
-                playerOneSymbol!!,
-                playerTwoSymbol!!,
-                timeToPlay.toString())
-        )
+        game!!.playerOneSymbol = playerOneSymbol
+        game!!.playerTwoSymbol = playerTwoSymbol
+        game!!.timeToPlay = timeToPlay
+        gameSetup.putExtra("game", game)
         startActivity(gameSetup)
         finish()
         //TODO("Implement some animation here...")
@@ -46,8 +45,7 @@ class AdjustActivity: AppCompatActivity(){
     private fun getPlayersExtra(){
         with(intent.extras){
             if(this != null){
-                playerOne = this.get("playerOne") as String
-                playerTwo = this.get("playerTwo") as String
+                game = this.get("game") as Game
             }
         }
     }
