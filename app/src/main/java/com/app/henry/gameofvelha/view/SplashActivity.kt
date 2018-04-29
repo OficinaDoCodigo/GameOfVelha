@@ -24,6 +24,7 @@ class SplashActivity: AppCompatActivity() {
             Thread.sleep(3000)
             runOnUiThread {
                 startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                finish()
             }
         }
     }

@@ -38,57 +38,6 @@
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-    <RadioButton
-        android:id="@+id/oneMinRadio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="1 min"
-        android:textColor="#3A4"
-        app:layout_constraintEnd_toStartOf="@+id/thirtySecRadio"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <RadioButton
-        android:id="@+id/thirtySecRadio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="30 seg"
-        android:textColor="#DA3"
-        app:layout_constraintBottom_toBottomOf="@+id/oneMinRadio"
-        app:layout_constraintEnd_toStartOf="@+id/fifteenSecRadio"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/oneMinRadio"
-        app:layout_constraintTop_toTopOf="@+id/oneMinRadio" />
-
-    <RadioButton
-        android:id="@+id/fifteenSecRadio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="15 seg"
-        android:textColor="#D62"
-        app:layout_constraintBottom_toBottomOf="@+id/thirtySecRadio"
-        app:layout_constraintEnd_toStartOf="@+id/fiveSecRadio"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/thirtySecRadio"
-        app:layout_constraintTop_toTopOf="@+id/thirtySecRadio" />
-
-    <RadioButton
-        android:id="@+id/fiveSecRadio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="5 seg"
-        android:textColor="#FF3434"
-        app:layout_constraintBottom_toBottomOf="@+id/fifteenSecRadio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fifteenSecRadio"
-        app:layout_constraintTop_toTopOf="@+id/fifteenSecRadio" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -122,17 +71,18 @@
         android:id="@+id/namePlayerOneTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="64dp"
         android:gravity="center"
         android:text="Carlos"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/namePlayerTwoTextView"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fiveSecRadio" />
+        app:layout_constraintTop_toBottomOf="@+id/radioLimitTime" />
 
     <TextView
-        android:id="@+id/simbolPlayerOneTextView"
+        android:id="@+id/symbolPlayerOneTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -150,14 +100,14 @@
         android:layout_height="wrap_content"
         android:text="VS"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/simbolPlayerOneTextView"
-        app:layout_constraintEnd_toStartOf="@+id/simbolPlayerTwoTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/symbolPlayerOneTextView"
+        app:layout_constraintEnd_toStartOf="@+id/symbolPlayerTwoTextView"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/simbolPlayerOneTextView"
-        app:layout_constraintTop_toTopOf="@+id/simbolPlayerOneTextView" />
+        app:layout_constraintStart_toEndOf="@+id/symbolPlayerOneTextView"
+        app:layout_constraintTop_toTopOf="@+id/symbolPlayerOneTextView" />
 
     <TextView
-        android:id="@+id/simbolPlayerTwoTextView"
+        android:id="@+id/symbolPlayerTwoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="O"
@@ -185,6 +135,56 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simbolPlayerTwoTextView"
+        app:layout_constraintTop_toBottomOf="@+id/symbolPlayerTwoTextView"
         app:layout_constraintVertical_bias="1.0" />
+
+    <RadioGroup
+        android:id="@+id/radioLimitTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <RadioButton
+            android:id="@+id/oneMinRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 min"
+            android:layout_weight="1"
+            android:textColor="#3A4" />
+
+        <RadioButton
+            android:id="@+id/thirtySecRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 seg"
+            android:layout_weight="1"
+            android:textColor="#DA3" />
+
+        <RadioButton
+            android:id="@+id/fifteenSecRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 seg"
+            android:layout_weight="1"
+            android:textColor="#D62" />
+
+        <RadioButton
+            android:id="@+id/fiveSecRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 seg"
+            android:layout_weight="1"
+            android:textColor="#FF3434" />
+
+    </RadioGroup>
 </android.support.constraint.ConstraintLayout>

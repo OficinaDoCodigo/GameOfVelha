@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity(){
 
     private fun changeToPlayerOne(){
         startActivity(Intent(this@MainActivity, PlayerOneActivity::class.java))
-        finish()
         //TODO("Implement some animation here...")
     }
 }

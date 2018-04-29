@@ -19,13 +19,11 @@
         <activity android:name=".view.MainActivity" />
         <activity android:name=".view.PlayerOneActivity" />
         <activity android:name=".view.PlayerTwoActivity" />
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
         <activity android:name=".view.AdjustActivity" />
-        <activity android:name=".view.LoadGameActivity"></activity>
+        <activity android:name=".view.GameActivity"></activity>
     </application>
 
 </manifest>
