@@ -1,9 +1,12 @@
 package com.app.henry.gameofvelha.view
 
 import android.content.Intent
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.app.henry.gameofvelha.R
+import com.app.henry.gameofvelha.extentions.supportLollypop
 import com.app.henry.gameofvelha.model.entity.Game
 import kotlinx.android.synthetic.main.activity_adjust.*
 import java.util.*
@@ -19,6 +22,10 @@ class AdjustActivity: AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_adjust)
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        supportLollypop {
+            window.statusBarColor = Color.TRANSPARENT
+        }
         getPlayersExtra()
         displayPlayers()
         randomSymbols()
