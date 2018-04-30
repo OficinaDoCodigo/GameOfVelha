@@ -4,10 +4,6 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class Game: Parcelable{
-    var playerOne: String? = null
-    var playerTwo: String? = null
-    var playerOneSymbol: String? = null
-    var playerTwoSymbol: String? = null
-    var timeToPlay: Int? = null
-}
+data class Game(var playerOne: String, var playerTwo: String,
+           var playerOneSymbol: String, var playerTwoSymbol: String,
+           var timeToPlay: Int): Parcelable

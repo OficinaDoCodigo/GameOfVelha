@@ -20,7 +20,7 @@ class PlayerTwoActivity: AppCompatActivity(){
         supportLollypop {
             window.statusBarColor = Color.TRANSPARENT
         }
-        getPlayerOneExtra()
+        getExtraGame()
         nextPlayerTwoButton.setOnClickListener{ changeToAdjust() }
     }
 
@@ -37,10 +37,10 @@ class PlayerTwoActivity: AppCompatActivity(){
             }
         }
     }
-    private fun getPlayerOneExtra(){
+    private fun getExtraGame(){
         with(intent.extras){
             if(this != null){
-                 game = this.get("game") as Game
+                game = this.get("game") as Game
             }
         }
     }

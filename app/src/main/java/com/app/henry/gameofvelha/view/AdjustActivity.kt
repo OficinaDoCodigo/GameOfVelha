@@ -13,8 +13,6 @@ import java.util.*
 
 class AdjustActivity: AppCompatActivity(){
     private var game: Game? = null
-    private var playerOne: String? = null
-    private var playerTwo: String? = null
     private var playerOneSymbol: String? = null
     private var playerTwoSymbol: String? = null
     private var timeToPlay: Int? = null
@@ -41,9 +39,9 @@ class AdjustActivity: AppCompatActivity(){
             R.id.fiveSecRadio -> timeToPlay = 5
         }
         val gameSetup = Intent(this@AdjustActivity, GameActivity::class.java)
-        game!!.playerOneSymbol = playerOneSymbol
-        game!!.playerTwoSymbol = playerTwoSymbol
-        game!!.timeToPlay = timeToPlay
+        game!!.playerOneSymbol = playerOneSymbol as String
+        game!!.playerTwoSymbol = playerTwoSymbol as String
+        game!!.timeToPlay = timeToPlay as Int
         gameSetup.putExtra("game", game)
         startActivity(gameSetup)
         finish()
@@ -57,8 +55,8 @@ class AdjustActivity: AppCompatActivity(){
         }
     }
     private fun displayPlayers(){
-        namePlayerOneTextView.text = playerOne
-        namePlayerTwoTextView.text = playerTwo
+        namePlayerOneTextView.text = game!!.playerOne
+        namePlayerTwoTextView.text = game!!.playerTwo
     }
     private fun randomSymbols(){
         val rand = Random().nextInt(2)

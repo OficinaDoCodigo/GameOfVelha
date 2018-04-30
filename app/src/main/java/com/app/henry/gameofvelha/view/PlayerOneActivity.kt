@@ -12,7 +12,7 @@ import com.app.henry.gameofvelha.model.entity.Game
 import kotlinx.android.synthetic.main.activity_player_one.*
 
 class PlayerOneActivity: AppCompatActivity() {
-    private var game = Game()
+    private var game = Game("","","","",0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
