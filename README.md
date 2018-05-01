@@ -17,19 +17,15 @@ O desenvolvimento desse app teve início no ano de 2015, com a contribuição de
 
 #### Interface
 
-O app conta com um conjunto de 9 activities: [MainActivity], [MenuActivity], [ConfigActivity], [InfoPlayerOne], [InfoPlayerTwo], [SetTimeActivity], [SetTimeActivity], [ShowOpponentsActivity], [GameActivity], [ExibirVencedoresActivity].
+O app conta com um conjunto de 5 activities: [MainActivity], [PlayerOneActivity], [PlayerTwoActivity], [AdjustActivity], [GameActivity].
 
-![MenuActivity](https://github.com/SeraQueQual/Game_of_velha/blob/master/screnshots/Menu.png?raw=true "Menu")
-![InfoPlayerOne](https://github.com/SeraQueQual/Game_of_velha/blob/master/screnshots/Player1.png?raw=true "Nome do primeiro jogador")
-![InfoPlayerTwo](https://github.com/SeraQueQual/Game_of_velha/blob/master/screnshots/Player2.png?raw=true "Nome do segundo jogador")
-![SetTimeActivity](https://github.com/SeraQueQual/Game_of_velha/blob/master/screnshots/Tempo.png?raw=true "Tempo de jogada")
-![ShowOpponentsActivity](https://github.com/SeraQueQual/Game_of_velha/blob/master/screnshots/Preparacao1.png?raw=true "Preparação")
-![Preparacao2](https://github.com/SeraQueQual/Game_of_velha/blob/master/screnshots/Preparacao.png?raw=true "Preparação 2")
-![GameActivity](https://github.com/SeraQueQual/Game_of_velha/blob/master/screnshots/Vitoria(2).png?raw=true "Vitoria1")
-![GameActivity2](https://github.com/SeraQueQual/Game_of_velha/blob/master/screnshots/Vitoria.png?raw=true "Vitoria2")
-![ExibirVencedoresActivity](https://github.com/SeraQueQual/Game_of_velha/blob/master/screnshots/ExibirVencedores.png?raw=true "ExibirVencedoresActiviy")
+![MainActivity](https://github.com/OficinaDoCodigo/GameOfVelha/blob/dev/screenshots/activity_main.png?raw=true "Main")
+![PlayerOneActivity](https://github.com/OficinaDoCodigo/GameOfVelha/blob/dev/screenshots/activity_player_one.png?raw=true "Nome do primeiro jogador")
+![PlayerTwoActivity](https://github.com/OficinaDoCodigo/GameOfVelha/blob/dev/screenshots/activity_player_two.png?raw=true "Nome do segundo jogador")
+![AdjustActivity](https://github.com/OficinaDoCodigo/GameOfVelha/blob/dev/screenshots/activity_adjust.png?raw=true "Tempo de jogada")
+![GameActivity](https://github.com/OficinaDoCodigo/GameOfVelha/blob/dev/screenshots/activity_game.png?raw=true "Game")
 
 #### Desenvolvedores
 
 - [Caio Alves](https://github.com/alvescaio)
-- [Carlos Henry](https://github.com/henrywm)
+- [Carlos Henrique](https://github.com/henrywm)
