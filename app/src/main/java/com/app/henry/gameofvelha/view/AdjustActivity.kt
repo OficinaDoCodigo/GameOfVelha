@@ -8,6 +8,7 @@ import android.view.View
 import com.app.henry.gameofvelha.R
 import com.app.henry.gameofvelha.extentions.supportLollypop
 import com.app.henry.gameofvelha.model.entity.Game
+import com.app.henry.gameofvelha.view.game.GameActivity
 import kotlinx.android.synthetic.main.activity_adjust.*
 import java.util.*
 
@@ -49,9 +50,7 @@ class AdjustActivity: AppCompatActivity(){
     }
     private fun getPlayersExtra(){
         with(intent.extras){
-            if(this != null){
-                game = this.get("game") as Game
-            }
+            if(this != null) game = this.get("game") as Game
         }
     }
     private fun displayPlayers(){
@@ -63,13 +62,11 @@ class AdjustActivity: AppCompatActivity(){
         if(rand == 0){
             playerOneSymbol = "X"
             playerTwoSymbol = "O"
-            symbolPlayerOneTextView.text = playerOneSymbol
-            symbolPlayerTwoTextView.text = playerTwoSymbol
         }else{
-            playerOneSymbol = "X"
-            playerTwoSymbol = "O"
-            symbolPlayerOneTextView.text = playerOneSymbol
-            symbolPlayerTwoTextView.text = playerTwoSymbol
+            playerOneSymbol = "O"
+            playerTwoSymbol = "X"
         }
+        symbolPlayerOneTextView.text = playerOneSymbol
+        symbolPlayerTwoTextView.text = playerTwoSymbol
     }
 }
